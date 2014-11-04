@@ -20,11 +20,15 @@ body {
   color: white;
 }
 
-.nav > a:hover {
-  font-style: underline;
+.nav-button {
+  padding: 10px 0 10px 0;
 }
 
-.nav-button {
-  position: relative;
+.nav-button:hover {
+  background-color: grey;
+}
+
+.nav-button .active {
+  background-color: grey;
 }
 

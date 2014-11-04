@@ -7,6 +7,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var nodemon = require('gulp-nodemon');
 
 // // Lint Task
 // gulp.task('lint', function() {
@@ -37,9 +38,10 @@ gulp.task('watch', function() {
     gulp.watch('client/app/**/*.scss', ['sass']);
 });
 
-gulp.task('watchsass', function() {
+gulp.task('nodemon', function() {
     // gulp.watch('client/app/**/*.js', ['scripts']);
     gulp.watch('client/app/**/*.scss', ['sass']);
+    nodemon('server/app.js');
 });
 
 

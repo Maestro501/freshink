@@ -14,8 +14,11 @@ body {
   display: inline-block;
   color: white; }
 
-.nav > a:hover {
-  font-style: underline; }
-
 .nav-button {
-  position: relative; }
+  padding: 10px 0 10px 0; }
+
+.nav-button:hover {
+  background-color: grey; }
+
+.nav-button.active {
+  background-color: grey; }

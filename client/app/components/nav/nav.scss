@@ -11,7 +11,8 @@ body {
   height: $nav-height;
 }
 
-.nav > a {
+.nav > a,
+.nav-buttons > a {
   padding: 20px 20px;
   line-height: 40px;
   height: 40px;
@@ -20,15 +21,21 @@ body {
   color: white;
 }
 
+.nav-buttons {
+  float: right;
+}
+
 .nav-button {
   padding: 10px 0 10px 0;
+  cursor: pointer;
+  cursor: hand;
 }
 
 .nav-button:hover {
-  background-color: grey;
+  background-color: #404040;
 }
 
 .nav-button.active {
-  background-color: grey;
+  background-color: #404040;
 }
 

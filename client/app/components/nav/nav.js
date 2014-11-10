@@ -1,26 +1,5 @@
 /** @jsx React.DOM */
 
-// var NavigationButton = React.createClass({
-//   getInitialState: function () {
-//     return {active: false};
-//   },
-
-//   clicked: function (index) {
-//     this.setState({active: index}, function(){
-//       console.log(index, ' clicked, ', this.state);
-//     });
-//   },
-  
-//   render: function () {
-//     return (
-//       <div className="nav">
-//         <a className="nav-logo">LOGO</a>
-//         {buttonsObj}
-//       </div>
-//     );
-//   }
-// });
-
 var NavigationBar = React.createClass({
   getInitialState: function () {
     return {active: false};
@@ -37,7 +16,6 @@ var NavigationBar = React.createClass({
 
     this.props.buttons.map(function (item, index) {
       var buttonClasses = 'nav-button'
-      // var item = item.main;
       
       if (self.state.active === index) {
         buttonClasses += ' active';
@@ -51,24 +29,12 @@ var NavigationBar = React.createClass({
     return (
       <div className="nav">
         <a className="nav-logo">LOGO</a>
-        {buttonsObj}
+        <div className="nav-buttons">
+          {buttonsObj}
+        </div>
       </div>
     );
   }
 });
 
-
-// var navigationButtons = [{
-//   main: 'one',
-//   dropdown: ['one-one', 'one-two']
-// },
-// {
-//   main: 'two',
-//   dropdown: ['two-one', 'two-two']
-// },
-// {
-//   main: 'three',
-//   dropdown: ['three-one', 'three-two', 'three-three']
-// }];
-
-React.render(<NavigationBar buttons={['one', 'two', 'three']}/>, document.getElementById('content'));
+React.render(<NavigationBar buttons={['Breaking News', 'Tech', 'Science', 'Business']}/>, document.getElementById('content'));

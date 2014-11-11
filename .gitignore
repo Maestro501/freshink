@@ -3,4 +3,6 @@ client/bower_components/
 .DS_Store
 client/app/components/**/*.css
 client/app/*.css
+client/app/bundle.js
 public/
+server/config/local.env.js

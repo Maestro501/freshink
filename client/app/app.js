@@ -1,31 +1,43 @@
-// var App = React.createClass({
-//   render: function() {
-//     return (
-//       <div>
-//         <header>
-//           <ul>
-//             <li><Link to="app">Dashboard</Link></li>
-//             <li><Link to="inbox">Inbox</Link></li>
-//             <li><Link to="calendar">Calendar</Link></li>
-//           </ul>
-//           Logged in as Joe
-//         </header>
+var Route = ReactRouter.Route;
+var Routes = ReactRouter.Routes;
 
-//         {/* this is the important part */}
-//         <this.props.activeRouteHandler/>
-//       </div>
-//     );
-//   }
-// });
+var Navigation = require('./components/nav/nav.js');
 
-// var routes = (
-//   <Routes location="history">
-//     <Route name="app" path="/" handler={App}>
-//       <Route name="inbox" handler={Inbox}/>
-//       <Route name="calendar" handler={Calendar}/>
-//       <DefaultRoute handler={Dashboard}/>
-//     </Route>
-//   </Routes>
-// );
+var App = React.createClass({
+  render: function () {
+    return (
+      <div>
+        <Navigation/>
+        <this.props.activeRouteHandler/>
+      </div>
+    );
+  }
+});
 
-// React.renderComponent(routes, document.body);
+var Landing = React.createClass({
+  render: function () {
+    return (
+      <div>Landing</div>
+    );
+  }
+});
+var Tech = React.createClass({
+  render: function () {
+    return (
+      <div>Tech</div>
+    );
+  }
+});
+
+var routes = (
+  <Routes location="history">
+    <Route name="app" path="/" handler={App}>
+      <Route name="landing" path="/" handler={Landing}></Route>
+      <Route name="tech" path="/tech" handler={Tech}>
+      </Route>
+
+    </Route>
+  </Routes>
+);
+
+React.renderComponent(routes, document.body);

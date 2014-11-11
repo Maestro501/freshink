@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- <div class="navigation"></div> -->
-    <div id="content"></div>
+    <!-- <div id="content"></div> -->
     <!-- <div class="footer"></div> -->
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -49,13 +49,15 @@
     <![endif]-->
     <!-- build:js({client,node_modules}) app/vendor.js -->
       <!-- bower:js -->
-      <script src="bower_components/jquery/dist/jquery.js"></script>
-      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
-      <script src="bower_components/react/react.js"></script>
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="bower_components/lodash/dist/lodash.compat.min.js"></script>
+      <script src="bower_components/react/react.min.js"></script>
       <script src="bower_components/react/JSXTransformer.js"></script>
+      <script src="bower_components/react-router/dist/react-router.min.js"></script>
       
       <!-- <script type="text/jsx" src="app/components/main/main.js"></script> -->
-      <script type="text/jsx" src="app/components/nav/nav.js"></script>
+      <script type="text/jsx" src="app/bundle.js"></script>
+      <!-- <script type="text/jsx" src="app/components/nav/nav.js"></script> -->
       <!-- endbower -->
       <!-- <script src="socket.io-client/socket.io.js"></script> -->
     <!-- endbuild -->
